@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
-// import { Link } from "react-router-dom";
 
 const App = () => {
     const [stylistList, setStylistList] = useState([]);
@@ -13,9 +12,20 @@ const App = () => {
             },
         })
             .then(response => response.json())
-            .then(response =>
-                setStylistList(response)
-            );
+            .then(response => {
+
+                let cities = ['Warszawa', 'Kraków', 'Wrocław'];
+                let tab = [];
+
+                for (let i = 0; i <= cities.length; i++) {
+                    response.forEach(item => (item.city == cities[i] && tab.push(item)))
+                }
+
+                setStylistList(tab)
+
+            });
+
+
     }
 
     useEffect(() => {
@@ -25,7 +35,6 @@ const App = () => {
     return (
         <>
             {stylistList.map((stylist, index) =>
-                // console.log(stylist)
                 <React.Fragment key={index}>
                     {stylistList &&
                         <Card details={stylist} />

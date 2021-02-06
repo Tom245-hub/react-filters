@@ -17,10 +17,10 @@ const App = () => {
       <Router>
         <div className="container-fluid">
           <div className="row justify-content-md-center vh-100">
-            <div className="col col-md-3 left-column" >
+            <div className="col col-md-2 left-column" >
               <LeftColumn />
             </div>
-            <div className="col col-md-9 right-column" >
+            <div className="col col-md-10 right-column" >
               <RightColumn />
             </div>
           </div>

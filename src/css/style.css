@@ -9693,10 +9693,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .right-column {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 0.5rem;
-  row-gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
   padding: 1rem;
   background-color: #F9F9F9;
 }
@@ -9722,16 +9722,16 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .right-column :nth-child(4) {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
 }
 
 .right-column :nth-child(5) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-column: 5 / 6;
+  grid-row: 1 / 2;
 }
 
 .right-column :nth-child(6) {
-  grid-column: 3 / 4;
+  grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
