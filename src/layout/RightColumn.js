@@ -13,24 +13,26 @@ const App = () => {
         })
             .then(response => response.json())
             .then(response => {
-
-                let cities = ['Warszawa', 'Kraków', 'Wrocław'];
-                let tab = [];
-
-                for (let i = 0; i <= cities.length; i++) {
-                    response.forEach(item => (item.city == cities[i] && tab.push(item)))
-                }
-
-                setStylistList(tab)
-
+                setStylistList(result(response))
             });
-
-
     }
 
     useEffect(() => {
         getFetch();
     }, []);
+
+    let cities = [];
+    let sortedResult = [];
+
+    const result = (list) => {
+        list.map(item =>
+            !cities.includes(item.city) && cities.push(item.city)
+        )
+        cities.map(itemCities =>
+            list.map(itemList => itemList.city == itemCities && sortedResult.push(itemList))
+        )
+        return sortedResult;
+    }
 
     return (
         <>
