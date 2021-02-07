@@ -21,18 +21,30 @@ const App = () => {
         getFetch();
     }, []);
 
+    // Sortuje po mieście
     let cities = [];
     let sortedResult = [];
-
     const result = (list) => {
+        // zliczanie ilości miast
         list.map(item =>
             !cities.includes(item.city) && cities.push(item.city)
         )
+
+        // sortowanie według miasta
         cities.map(itemCities =>
             list.map(itemList => itemList.city == itemCities && sortedResult.push(itemList))
         )
         return sortedResult;
     }
+
+    // Sortuje po wykonywanej usłudze
+    // let hairWedding = [];
+    // const servicefilter = (list) => {
+    //     list.map(item =>
+    //         item.services.wedding_hair && hairWedding.push(item)
+    //     )
+    //     return hairWedding;
+    // }
 
     return (
         <>

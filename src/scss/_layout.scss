@@ -1,7 +1,17 @@
 .left-column {
-    display: flex;
     padding: $padding-xxl;
     background-color: $primary;
+    color: #FFF;
+    .row {
+        padding: 0 $padding-xxl;
+        justify-items: center;
+        select {
+            margin-bottom: $margin-xxl;
+        }
+        input[type="checkbox"] {
+            margin-right: $margin-xxl;
+        }
+    }
 }
 
 .right-column {
@@ -13,10 +23,22 @@
     padding: $padding-xxl;
     background-color: $background-color;
     .card {
-        .card-img-top {
-            height: 15rem;
-            object-fit: cover;
+        .image-box {
+            overflow: hidden;
+
+            .card-img-top {
+                height: 15rem;
+                object-fit: cover;
+
+                transition-duration: 0.3s;
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 0;
+                }
+
+            }
         }
+        
     }
     :nth-child(1){
         grid-column: 1 / 2;

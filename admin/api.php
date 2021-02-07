@@ -26,11 +26,11 @@ try{
                 'id_stylist' => $row['id_stylist'],
                 'name' => $row['name'],
                 'image' => $row['image'],
-                'servises' => [
-                    'wedding_hair' => $row['wedding_hair'],
-                    'wedding_makeup' => $row['wedding_makeup'],
-                    'event_hair' => $row['event_hair'],
-                    'event_makeup' => $row['event_makeup'],
+                'services' => [
+                    'wedding_hair' => $row['wedding_hair'] == 1 ? true : false,
+                    'wedding_makeup' => $row['wedding_makeup'] == 1 ? true : false,
+                    'event_hair' => $row['event_hair'] == 1 ? true : false,
+                    'event_makeup' => $row['event_makeup'] == 1 ? true : false,
                 ],
                 'city' => $row['city'],
                 'desc' => $row['desc'],
