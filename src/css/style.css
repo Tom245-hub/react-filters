@@ -9694,6 +9694,8 @@ a.text-dark:hover, a.text-dark:focus {
 .left-column .row {
   padding: 0 1rem;
   justify-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .left-column .row select {
@@ -9702,6 +9704,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .left-column .row input[type="checkbox"] {
   margin-right: 1rem;
+}
+
+.left-column .row input[type="text"] {
+  margin: 1rem 0;
 }
 
 .right-column {

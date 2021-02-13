@@ -5,11 +5,16 @@
     .row {
         padding: 0 $padding-xxl;
         justify-items: center;
+        display: flex;
+        flex-direction: row;
         select {
             margin-bottom: $margin-xxl;
         }
         input[type="checkbox"] {
             margin-right: $margin-xxl;
+        }
+        input[type="text"] {
+            margin: $margin-xxl 0;
         }
     }
 }

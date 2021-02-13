@@ -32,7 +32,7 @@ const App = () => {
 
         // sortowanie według miasta
         cities.map(itemCities =>
-            list.map(itemList => itemList.city == itemCities && sortedResult.push(itemList))
+            list.map(itemList => itemList.city === itemCities && sortedResult.push(itemList))
         )
         return sortedResult;
     }
